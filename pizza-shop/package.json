@@ -9,14 +9,24 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.1",
+    "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "localforage": "^1.10.0",
     "lucide-react": "^0.454.0",
+    "match-sorter": "^8.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-helmet-async": "^2.0.5",
+    "react-hook-form": "^7.53.1",
+    "react-router-dom": "^6.27.0",
+    "sort-by": "^1.2.0",
     "tailwind-merge": "^2.5.4",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "vite-tsconfig-paths": "^5.1.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.2.2",
@@ -27,6 +37,7 @@
     "autoprefixer": "^10.4.20",
     "eslint": "^8.55.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-tailwindcss": "^3.17.5",
     "globals": "^15.11.0",
     "postcss": "^8.4.47",
     "prettier-plugin-tailwindcss": "^0.6.8",
