@@ -6,6 +6,7 @@ export interface RegisterRestaurantBody {
   email: string
   phone: string
 }
+
 export const registerRestaurant = async ({
   restaurantName,
   managerName,
