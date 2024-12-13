@@ -39,6 +39,7 @@ export const RevenueChart = () => {
   })
 
   const chartData = useMemo(() => {
+    console.log('dailyRevenueInPeriod', dailyRevenueInPeriod)
     return dailyRevenueInPeriod?.map((chartItem) => {
       return {
         date: chartItem.date,
@@ -46,6 +47,8 @@ export const RevenueChart = () => {
       }
     })
   }, [dailyRevenueInPeriod])
+
+  console.log('chartData', chartData)
 
   return (
     <Card className="col-span-6">
@@ -84,7 +87,7 @@ export const RevenueChart = () => {
               stroke={colors.violet[500]}
               type="linear"
               strokeWidth={2}
-              dataKey="revenue"
+              dataKey="receipt"
             />
           </LineChart>
         </ResponsiveContainer>
