@@ -18,6 +18,9 @@ bun seed
 bun dev
 ```
 
+### To run Drizzle Studio
+- `bunx drizzle-kit studio`
+
 ## Features
 
 > The **summary** of the features are listed below. All the features contains E2E tests.

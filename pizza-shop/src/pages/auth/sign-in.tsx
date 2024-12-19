@@ -9,6 +9,7 @@ import { signIn } from '@/api/sign-in'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import { env } from '@/env'
 
 const signInForm = z.object({
   email: z.string().email(),
@@ -34,19 +35,30 @@ export function SignIn() {
   })
 
   const handleSignIn = async (data: SignInForm) => {
-    console.log(data)
+    //console.log(data)
 
     try {
       await authenticate({ email: data.email })
 
-      toast.success('Enviamos um link de autenticação para seu e-mail.', {
-        action: {
-          label: 'Reenviar',
-          onClick: () => {
-            handleSignIn(data)
+      if(env.VITE_NODE_ENV === 'dev') {
+        toast.success('Dev, olhe no console da API para autenticação!', {
+          action: {
+            label: 'CONSOLE LOG',
+            onClick: () => {
+              handleSignIn(data)
+            },
           },
-        },
-      })
+        })
+      } else {
+        toast.success('Enviamos um link de autenticação para seu e-mail.', {
+          action: {
+            label: 'Reenviar',
+            onClick: () => {
+              handleSignIn(data)
+            },
+          },
+        })
+      }
     } catch (error) {
       console.log(error)
       toast.error('Credenciais inválidas.')

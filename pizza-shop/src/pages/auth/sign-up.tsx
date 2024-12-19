@@ -32,7 +32,7 @@ export function SignUp() {
   })
 
   const handleSignUp = async (data: SignUpForm) => {
-    console.log(data)
+    //console.log(data)
 
     try {
       await new Promise((resolve) => setTimeout(resolve, 2000))

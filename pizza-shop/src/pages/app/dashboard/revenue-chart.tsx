@@ -39,7 +39,7 @@ export const RevenueChart = () => {
   })
 
   const chartData = useMemo(() => {
-    console.log('dailyRevenueInPeriod', dailyRevenueInPeriod)
+   // console.log('dailyRevenueInPeriod', dailyRevenueInPeriod)
     return dailyRevenueInPeriod?.map((chartItem) => {
       return {
         date: chartItem.date,
@@ -48,7 +48,7 @@ export const RevenueChart = () => {
     })
   }, [dailyRevenueInPeriod])
 
-  console.log('chartData', chartData)
+  // console.log('chartData', chartData)
 
   return (
     <Card className="col-span-6">

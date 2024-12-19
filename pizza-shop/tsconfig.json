@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "composite": true,
     "useDefineForClassFields": true,
     "lib": [
       "ES2020",
@@ -32,10 +31,14 @@
       ]
     }
   },
-  "include": ["src"],
+  "include": [
+    "src",
+    "test"
+  ],
+  "composite": true,
   "references": [
     {
-      "path": "tsconfig.node.json"
+      "path": "tsconfig.node.json",
     }
   ]
 }
