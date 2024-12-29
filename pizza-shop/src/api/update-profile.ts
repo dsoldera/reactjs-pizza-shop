@@ -4,6 +4,7 @@ export interface UpdateProfileBody {
   name: string
   description: string | null
 }
+
 export const updateProfile = async ({
   name,
   description,
