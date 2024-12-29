@@ -99,9 +99,14 @@ export const StoreProfileDialog = () => {
         description: data.description,
       })
 
-      toast.success('Perfil Atualizado com Sucesso')
+      toast.success('Perfil Atualizado com Sucesso', {
+        position: 'top-center',
+        duration: 5000,
+      })
     } catch {
-      toast.error('Falha ao Atualizar o Perfil, tente novamente')
+      toast.error('Falha ao Atualizar o Perfil, tente novamente', {
+        position: 'top-center',
+      })
     }
   }
 

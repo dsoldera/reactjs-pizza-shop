@@ -41,7 +41,9 @@ export function SignIn() {
       await authenticate({ email: data.email })
 
       if(env.VITE_NODE_ENV === 'dev') {
-        toast.success('Dev, olhe no console da API para autenticação!', {
+        toast.success('Dev, olhe no console da API para autenticação!', 
+        //toast.success('Enviamos um link de autenticação para seu e-mail.',
+          {
           action: {
             label: 'CONSOLE LOG',
             onClick: () => {
